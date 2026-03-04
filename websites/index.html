@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Websites & Landing Pages — Imran Hossain</title>
+  <meta name="description" content="Collection of websites and landing pages built by Imran Hossain.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text-primary: #ffffff;
+      --text-secondary: #a0a0a0;
+      --accent: #4ADE80;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 48px;
+      transition: color 0.3s;
+    }
+
+    .back-link:hover { color: var(--accent); }
+
+    .header {
+      margin-bottom: 64px;
+    }
+
+    .label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-secondary);
+      max-width: 500px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(255,255,255,0.08);
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .card-image {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      color: var(--text-secondary);
+    }
+
+    .card-content {
+      padding: 24px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+
+    .card-link:hover { text-decoration: underline; }
+
+    .tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .tag {
+      font-size: 11px;
+      padding: 4px 10px;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="../" class="back-link">&larr; Back to Portfolio</a>
+
+    <div class="header">
+      <div class="label">Websites</div>
+      <h1>Landing Pages & Web Apps</h1>
+      <p class="subtitle">A collection of websites and landing pages I've designed and built.</p>
+    </div>
+
+    <div class="grid">
+      <!-- Real Estate Landing Page -->
+      <div class="card">
+        <div class="card-image">🏠</div>
+        <div class="card-content">
+          <h3 class="card-title">Real Estate Landing</h3>
+          <p class="card-desc">Modern real estate landing page with property listings, search functionality, and lead capture.</p>
+          <div class="tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a href="./real-estate/" class="card-link">View Live &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Add more cards as you build more landing pages -->
+      <!--
+      <div class="card">
+        <div class="card-image">🚀</div>
+        <div class="card-content">
+          <h3 class="card-title">SaaS Landing</h3>
+          <p class="card-desc">Description here...</p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Tailwind</span>
+          </div>
+          <a href="./saas-landing/" class="card-link">View Live &rarr;</a>
+        </div>
+      </div>
+      -->
+    </div>
+  </div>
+</body>
+</html>

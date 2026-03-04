@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Showcase — Imran Hossain</title>
+  <meta name="description" content="Landing pages and websites I've designed and built.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 24px;
+      padding: 40px 0;
+    }
+    .showcase-item {
+      position: relative;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.02);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .showcase-item:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+    .showcase-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.8;
+      transition: opacity 0.3s;
+    }
+    .showcase-item:hover img {
+      opacity: 1;
+    }
+    .showcase-item__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 50%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .showcase-item:hover .showcase-item__overlay {
+      opacity: 1;
+    }
+    .showcase-item__title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .showcase-item__link {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+    .filter-tab {
+      padding: 8px 20px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-secondary);
+      border: 1px solid rgba(255,255,255,0.1);
+      background: transparent;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .filter-tab:hover, .filter-tab.active {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body class="loaded">
+  <!-- Navigation -->
+  <nav class="nav scrolled">
+    <a href="../" class="nav__logo hoverable">
+      <span class="nav__logo-bold">IMRAN</span>
+      <span class="nav__logo-light">HOSSAIN</span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="../#about" class="nav__link hoverable">About</a></li>
+      <li><a href="../#projects" class="nav__link hoverable">Work</a></li>
+      <li><a href="../blog/" class="nav__link hoverable">Blog</a></li>
+      <li><a href="../#contact" class="nav__link hoverable">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Showcase Content -->
+  <section style="padding: 150px clamp(1.5rem, 6vw, 8vw) 100px;">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div class="projects__label">
+        <span class="projects__label-text">Showcase</span>
+        <span class="projects__label-line"></span>
+      </div>
+      <h1 class="projects__heading">Shipped Interfaces</h1>
+      <p class="projects__subtext">Landing pages, websites, and web apps I've designed and built.</p>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="landing">Landing Pages</button>
+        <button class="filter-tab" data-filter="saas">SaaS</button>
+        <button class="filter-tab" data-filter="ai">AI Products</button>
+      </div>
+
+      <!-- Showcase Grid -->
+      <div class="showcase-grid">
+        <!-- Example items (replace with your actual projects) -->
+        <a href="https://your-landing-page.com" target="_blank" class="showcase-item" data-category="landing">
+          <img src="../assets/images/placeholder.jpg" alt="Project 1">
+          <div class="showcase-item__overlay">
+            <span class="showcase-item__title">Project Name</span>
+            <span class="showcase-item__link">View Live →</span>
+          </div>
+        </a>
+        <!-- Add more items here -->
+      </div>
+
+      <div style="padding: 40px 0; text-align: center; color: var(--text-secondary);">
+        <p>More projects coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="padding: 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.08);">
+    <p style="font-size: 12px; color: var(--text-secondary);">&copy; 2024 Imran Hossain. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple filter functionality
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        document.querySelectorAll('.showcase-item').forEach(item => {
+          if (filter === 'all' || item.dataset.category === filter) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
