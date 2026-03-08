@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | DONUTS</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍩</text></svg>">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Rubik:wght@400;500;700&family=Comforter&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ff718d;
+            --dark: #534449;
+            --cream: #f3ebd8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rubik', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .error-page {
+            max-width: 540px;
+        }
+
+        .error-code {
+            font-family: 'Climate Crisis', sans-serif;
+            font-size: clamp(5rem, 18vw, 10rem);
+            color: var(--pink);
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+
+        .error-bakery {
+            font-family: 'Comforter', sans-serif;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: var(--cream);
+            margin-bottom: 24px;
+        }
+
+        .error-line {
+            width: 60px;
+            height: 3px;
+            background: var(--pink);
+            margin: 0 auto 32px;
+            border-radius: 3px;
+        }
+
+        .error-title {
+            font-family: 'Climate Crisis', sans-serif;
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            font-weight: 400;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .error-desc {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .error-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #fff;
+            color: var(--pink);
+            font-family: 'Rubik', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: background 0.3s, color 0.3s, transform 0.3s;
+        }
+
+        .error-btn:hover {
+            background: var(--dark);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .error-footer {
+            margin-top: 60px;
+            font-family: 'Comforter', sans-serif;
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-code">404</div>
+        <div class="error-bakery">Bakery</div>
+        <div class="error-line"></div>
+        <h1 class="error-title">This Donut Rolled Away</h1>
+        <p class="error-desc">The page you're looking for doesn't exist or has been eaten. Let's get you back to our delicious treats.</p>
+        <a href="/" class="error-btn">Return Home</a>
+        <div class="error-footer">DONUTS</div>
+    </div>
+</body>
+</html>

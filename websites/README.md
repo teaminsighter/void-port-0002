@@ -9,6 +9,7 @@ A curated collection of production-ready landing pages. Each folder is a standal
 | # | Folder | Type | Status |
 |---|--------|------|--------|
 | 1 | `real-estate/` | Luxury Real Estate Landing Page | Ready |
+| 2 | `donut/` | 3D Bakery Landing Page (Three.js) | Ready |
 
 ---
 
